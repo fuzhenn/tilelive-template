@@ -5,7 +5,6 @@
 Same as tilelive-file but get file's path from a path template
 
 ##Introduction
-This is tilelive adapter for local files, same as mapbox's [tilelive-file](https://github.com/mapbox/tilelive-file).
 
 tilelive-file's path rule is set to {z}/{x}/{y}, but in reality, the path rule to store tile files is usually arbitrary.
 
