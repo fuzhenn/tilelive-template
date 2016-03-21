@@ -1,7 +1,7 @@
 var assert = require('assert'),
     fs = require('fs');
 var rimraf = require('rimraf');
-var FileBackend = require('..');
+var templatelive = require('..');
 
 describe('putting', function() {
     afterEach(function(done) {
@@ -11,7 +11,7 @@ describe('putting', function() {
 
     describe('a tile', function() {
         it('should write a corresponding file', function(done) {
-            new FileBackend('./tmp/sink?filetype=txt&template=${z}/${x}/${y}', function(err, sink) {
+            new templatelive('./tmp/sink?filetype=txt&template=${z}/${x}/${y}', function(err, sink) {
                 if (err) return done(err);
 
                 var tileData = '3/7/7';
@@ -32,7 +32,7 @@ describe('putting', function() {
 
     describe('a grid', function() {
         it('should write a corresponding file', function(done) {
-            new FileBackend('./tmp/sink?template=${z}/${x}/${y}', function(err, sink) {
+            new templatelive('./tmp/sink?template=${z}/${x}/${y}', function(err, sink) {
                 if (err) return done(err);
 
                 var grid = { foo: "bar" };

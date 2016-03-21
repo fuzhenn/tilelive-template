@@ -1,4 +1,4 @@
-var file = require('..');
+var templatelive = require('..');
 var assert = require('assert');
 var crypto = require('crypto');
 var fs = require('fs');
