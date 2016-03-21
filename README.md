@@ -9,17 +9,15 @@ This is tilelive adapter for local files, same as mapbox's [tilelive-file](https
 
 tilelive-file's path rule is set to {z}/{x}/{y}, but in reality, the path rule to store tile files is usually arbitrary.
 
-tilelive-template thinks a path template phrase can be used to interprate XYZ to an actual file path.
+For example, some vendor stores a tile**(x: 54305 y:26571 z:16)** in the following path:
 
-For example, some vendor stores a tile in the following path:
+```bash 
+/path/to/root/16/5430/2657/5430_2657.png
+```
 
-given a tile's coordinates (x: 54305 y:26571 z:16)
-
-stored file path: /path/to/root/16/5430/2657/5430_2657.png
-
-In this case, we can use the following as the path template:
+In this case, we can use a path template:
 ```javascript
-'/path/to/tiles/{z}/${parseInt(x/10)}/${parseInt(y/10)}/${x}_${y}.png';
+var template = '/path/to/tiles/{z}/${parseInt(x/10)}/${parseInt(y/10)}/${x}_${y}.png';
 ```
 
 This is the reason tilelive-template is borned. 
@@ -45,7 +43,7 @@ var protocol = 'template+file://path/to/root?template=${z}/${x}/${y}&filetype=pn
 var TemplateLive = require('tilelive-template'),
     assert = require('assert');
 
-new TemplateLive('./test/fixtures/readonly?template=${z}/${x}/${y}&filetype=png', function(err, source) {
+new TemplateLive('template+file://./test/fixtures/readonly?template=${z}/${x}/${y}&filetype=png', function(err, source) {
     if (err) throw err;
     source.getTile(0, 0, 0, function(err, tile) {
         if (err) throw err;
