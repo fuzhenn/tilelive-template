@@ -6,7 +6,7 @@ Same as tilelive-file but get file's path from a path template
 
 ##Introduction
 
-tilelive-file's path rule is set to {z}/{x}/{y}, but in reality, the path rule to store tile files is usually arbitrary.
+tilelive-file's path rule is set to **{z}/{x}/{y}**, but in reality, the path rule to store tile files is usually arbitrary.
 
 For example, some vendor stores a tile**(x: 54305 y:26571 z:16)** in the following path:
 
