@@ -16,7 +16,7 @@ For example, some vendor stores a tile**(x: 54305 y:26571 z:16)** in the followi
 
 In this case, we can use a path template:
 ```javascript
-var template = '/path/to/tiles/{z}/${parseInt(x/10)}/${parseInt(y/10)}/${x}_${y}.png';
+var template = '/path/to/tiles/${z}/${parseInt(x/10)}/${parseInt(y/10)}/${x}_${y}.png';
 ```
 
 This is the reason tilelive-template is borned. 
