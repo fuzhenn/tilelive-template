@@ -40,7 +40,13 @@ var protocol = 'template+file://path/to/root?template=${z}/${x}/${y}&filetype=pn
 ##Usage
 ```javascript
 var TemplateLive = require('tilelive-template'),
-    assert = require('assert');
+    assert = require('assert'),
+    crypto = require('crypto');
+
+function md5(data) {
+    return crypto.createHash('md5').update(data).digest('hex');
+}
+
 
 new TemplateLive('template+file://./test/fixtures/readonly?template=${z}/${x}/${y}&filetype=png', function(err, source) {
     if (err) throw err;
