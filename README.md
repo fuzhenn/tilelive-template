@@ -11,7 +11,7 @@ tilelive-file's path rule is set to **{z}/{x}/{y}**, but in reality, the path ru
 For example, some vendor stores a tile**(x: 54305 y:26571 z:16)** in the following path:
 
 ```bash 
-/path/to/root/16/5430/2657/5430_2657.png
+/path/to/root/16/5430/2657/54305_26571.png
 ```
 
 In this case, we can use a path template:
