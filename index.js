@@ -2,8 +2,7 @@ var FileLive = require('tilelive-file'),
     template = require('lodash.template'),
     path = require('path'),
     qs = require('querystring'),
-    url = require('url'),
-    mkdirp = require('mkdirp');
+    url = require('url');
 
 function extend(dest) {
     var sources = Array.prototype.slice.call(arguments, 1),i, j, len, src;
@@ -39,13 +38,6 @@ function TemplateLive(uri, callback) {
     this.filetype = uri.query.filetype || 'png';
     this.template = uri.query.template;
     this._template = template(this.template);
-    try {
-        mkdirp.sync(this.basepath);    
-    } catch (error) {
-        console.error(error);
-        callback(error);
-        return;
-    }        
     callback(null, this);
     return undefined;
 }

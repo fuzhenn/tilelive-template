@@ -1,6 +1,6 @@
 {
   "name": "tilelive-template",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Same as tilelive-file but get file's path from a path template",
   "license": "MIT",
   "repository": {
@@ -13,8 +13,7 @@
   },
   "dependencies": {
     "tilelive-file": "https://github.com/FuZhenn/tilelive-file",
-    "lodash.template": "^4.2.2",
-    "mkdirp": "^0.5.1"
+    "lodash.template": "^4.2.2"
   },
   "readmeFilename": "README.md",
   "devDependencies": {
