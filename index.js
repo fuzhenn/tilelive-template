@@ -39,9 +39,14 @@ function TemplateLive(uri, callback) {
     this.filetype = uri.query.filetype || 'png';
     this.template = uri.query.template;
     this._template = template(this.template);
-    mkdirp(this.basepath, function(err) {
-        callback(err, this);
-    }.bind(this));
+    try {
+        mkdirp.sync(this.basepath);    
+    } catch (error) {
+        console.error(error);
+        callback(error);
+        return;
+    }        
+    callback(null, this);
     return undefined;
 }
 
