@@ -1,6 +1,6 @@
 {
   "name": "tilelive-template",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Same as tilelive-file but get file's path from a path template",
   "license": "MIT",
   "repository": {
