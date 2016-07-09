@@ -1,6 +1,6 @@
 # tilelive-template
 
-[![Circle CI](https://circleci.com/gh/FuZhenn/tilelive-template.svg?style=svg)](https://circleci.com/gh/FuZhenn/tilelive-template)
+[![Circle CI](https://circleci.com/gh/fuzhenn/tilelive-template.svg?style=svg)](https://circleci.com/gh/fuzhenn/tilelive-template)
 
 Same as tilelive-file but get file's path from a path template
 
