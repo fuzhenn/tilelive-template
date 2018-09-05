@@ -5,14 +5,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FuZhenn/tilelive-template"
+    "url": "git+https://github.com/fuzhenn/tilelive-template"
   },
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "mocha"
   },
   "dependencies": {
-    "tilelive-file": "https://github.com/FuZhenn/tilelive-file",
+    "tilelive-file": "https://github.com/fuzhenn/tilelive-file",
     "lodash.template": "^4.2.2"
   },
   "readmeFilename": "README.md",
